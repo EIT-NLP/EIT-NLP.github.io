@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EIT NLP 实验室 | EIT NLP Laboratory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        /* 响应式导航栏 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 1rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        #langToggle {
+            padding: 0.5rem 1rem;
+            background-color: #f0f0f0;
+            border: none;
+            cursor: pointer;
+        }
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 1rem;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            #langToggle {
+                margin-top: 1rem;
+                align-self: flex-start;
+            }
+        }
+        /* 微信图标样式 */
+        .wechat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: #07C160;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">EIT NLP</div>
+                <ul>
+                    <li><a href="#" data-lang="home">首页</a></li>
+                    <li><a href="#" data-lang="research">研究</a></li>
+                    <li><a href="#" data-lang="team">团队</a></li>
+                    <li><a href="#" data-lang="news">新闻</a></li>
+                </ul>
+                <button id="langToggle" data-lang="switchLang">Switch to English</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- 内容将在这里动态加载 -->
+            <h1>欢迎来到 EIT NLP 实验室</h1>
+            <p>这里是 EIT NLP 实验室的简介和最新动态。</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 EIT NLP 实验室。保留所有权利。</p>
+        </div>
+    </footer>
+
+    <!-- 添加微信图标 -->
+    <a href="#" class="wechat-icon" title="关注我们的微信公众号">
+        <i class="fab fa-weixin"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
