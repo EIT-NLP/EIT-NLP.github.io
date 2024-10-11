@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EIT NLP - 研究</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <nav>
+                <ul>
+                    <li><h1>EIT NLP</h1></li>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="research.html">研究</a></li>
+                    <li><a href="team.html">团队</a></li>
+                    <li><a href="recruitment.html">招聘</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Publications</h1>
+
+        <div class="publication-container">
+            <div class="publication">
+                <img src="wenyi/485b268174c2e5c9898d4c24dee62e7.png" alt="Fine-Tuning Large Language Models to Translate">
+                <div class="publication-content">
+                    <h2>Fine-Tuning Large Language Models to Translate: Will a Touch of Noisy Data in Misaligned Languages Suffice?</h2>
+                    <p><strong>作者：</strong>Dawei Zhu, Pinzhen Chen, Miaoran Zhang, Barry Haddow, Xiaoyu Shen, Dietrich Klakow</p>
+                    <p><strong>论文地址：</strong><a href="https://arxiv.org/pdf/2404.14122" target="_blank">https://arxiv.org/pdf/2404.14122</a></p>
+                    <p><strong>代码：</strong><a href="https://github.com/uds-lsv/mt-sft" target="_blank">https://github.com/uds-lsv/mt-sft</a></p>
+                    <p><strong>论文简介：</strong>传统上，多语言机器翻译的成功归因于训练数据的三个关键因素：大规模数据量、多样化的翻译方向以及高质量的数据。在当前微调大语言模型（LLMs）以进行翻译的实践中，我们重新审视了这些因素的重要性。我们发现，LLMs 在仅微调 32 对平行句子的情况下就表现出了强大的翻译能力，并且微调单一翻译方向能够实现多方向的翻译。然而，方向的选择至关重要：仅使用英文作为目标语言进行微调可能导致任务误解，从而阻碍向非英语语言的翻译。当噪声合成数据作为目标语言时，特别是当目标语言在 LLM 预训练中已得到良好表示的情况下，也会出现问题。然而，值得注意的是，合成数据对一个在预训练中代表性较低的语言的影响较为轻微。我们的研究结果表明，在将 LLMs 适配于翻译任务时，对数据量的要求可以适当放宽，但仍需仔细考虑，以防止 LLM 利用非预期的数据偏差。</p>
+                </div>
+            </div>
+
+            <div class="publication reverse">
+                <img src="er/fc2f896b1725f8eae95c1b23d965587.png" alt="The Accuracy Paradox in RLHF">
+                <div class="publication-content">
+                    <h2>The Accuracy Paradox in RLHF: When Better Reward Models Don't Yield Better Language Models</h2>
+                    <p><strong>作者：</strong>Yanjun Chen, Dawei Zhu, Yirong Sun, Xinghao Chen, Wei Zhang, Xiaoyu Shen</p>
+                    <p><strong>论文地址：</strong><a href="https://arxiv.org/abs/2410.06554" target="_blank">https://arxiv.org/abs/2410.06554</a></p>
+                    <p><strong>代码：</strong><a href="https://github.com/EIT-NLP/AccuracyParadox-RLHF" target="_blank">https://github.com/EIT-NLP/AccuracyParadox-RLHF</a></p>
+                    <p><strong>论文简介：</strong>人类反馈强化学习显著提升了自然语言处理的效果，通过训练使语言模型更符合人类预期。在这一过程中，奖励模型的强度是关键因素之一。本研究探讨了更强的奖励模型是否必然导致更优的语言模型表现。本文通过使用QA-FEEDBACK数据集和基于Longformer的奖励模型，针对相关性、事实性和完整性任务进行实验，揭示了一个令人惊讶的悖论：训练时使用中等准确率奖励模型的语言模型表现优于那些使用高准确率奖励模型的语言模型。这一发现挑战了普遍认为更强的奖励模型总是带来更好语言模型表现的观点，同时为未来关于影响模型表现的关键因素及如何选择合适奖励模型的研究开辟了新方向。</p>
+                </div>
+            </div>
+
+            <div class="publication">
+                <img src="er/7241f80b9ae8b22d18507afebb0d46e.png" alt="Unveiling In-Context Learning">
+                <div class="publication-content">
+                    <h2>Unveiling In-Context Learning: A Coordinate System to Understand Its Working Mechanism</h2>
+                    <p><strong>作者：</strong>Anhao Zhao, Fanghua Ye, Jinlan Fu, Xiaoyu Shen</p>
+                    <p><strong>论文地址：</strong><a href="https://arxiv.org/pdf/2407.17011" target="_blank">https://arxiv.org/pdf/2407.17011</a></p>
+                    <p><strong>代码：</strong><a href="https://github.com/EIT-NLP/2D-Coordinate-System-for-ICL" target="_blank">https://github.com/EIT-NLP/2D-Coordinate-System-for-ICL</a></p>
+                    <p><strong>论文简介：</strong>大型语言模型（LLMs）展现了显著的上下文学习（ICL）能力，然而其背后的工作机制仍未被充分理解。现有研究对ICL提出了两种相互矛盾的观点：一种强调演示中相似样本的重要性，指出标签正确性和更多示例的重要性；另一种则将ICL归因于LLM固有的任务识别能力，认为标签正确性和示例数量并非关键。在本研究中，我们提出了一个二维坐标系统，将这两种观点统一在一个系统框架中。该框架通过两个正交变量解释ICL的行为：演示中是否包含相似样本（感知）以及LLMs是否能够识别任务（认知）。我们提出了峰值逆序排名指标，用于检测LLMs的任务识别能力，并研究了LLMs对不同相似性定义的反应。基于此，我们进行了广泛的实验，以阐明ICL在多个代表性分类任务中的表现。最后，我们将分析扩展到生成任务，表明该坐标系统同样可以有效解释ICL在生成任务中的工作机制。</p>
+                </div>
+            </div>
+
+            <div class="publication reverse">
+                <img src="path/to/image4.jpg" alt="文章四图片">
+                <div class="publication-content">
+                    <h2>文章四</h2>
+                    <p>文章四的具体介绍。</p>
+                </div>
+            </div>
+
+            <div class="publication">
+                <img src="path/to/image5.jpg" alt="文章五图片">
+                <div class="publication-content">
+                    <h2>文章五</h2>
+                    <p>文章五的具体介绍。</p>
+                </div>
+            </div>
+
+            <div class="publication reverse">
+                <img src="path/to/image6.jpg" alt="文章六图片">
+                <div class="publication-content">
+                    <h2>文章六</h2>
+                    <p>文章六的具体介绍。</p>
+                </div>
+            </div>
+
+            <div class="publication">
+                <img src="path/to/image7.jpg" alt="文章七图片">
+                <div class="publication-content">
+                    <h2>文章七</h2>
+                    <p>文章七的具体介绍。</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="paper-list">
+            <h2>Recent Publications</h2>
+            <ol>
+                <li>
+                    <strong>Fine-Tuning Large Language Models to Translate: Will a Touch of Noisy Data in Misaligned Languages Suffice?</strong><br>
+                    Dawei Zhu, Pinzhen Chen, Miaoran Zhang, Barry Haddow, Xiaoyu Shen, Dietrich Klakow, arXiv, 2024.<br>
+                    <a href="https://arxiv.org/pdf/2404.14122" target="_blank">https://arxiv.org/pdf/2404.14122</a>
+                </li>
+                <li>
+                    <strong>The Accuracy Paradox in RLHF: When Better Reward Models Don't Yield Better Language Models</strong><br>
+                    Yanjun Chen, Dawei Zhu, Yirong Sun, Xinghao Chen, Wei Zhang, Xiaoyu Shen, arXiv, 2024.<br>
+                    <a href="https://arxiv.org/abs/2410.06554" target="_blank">https://arxiv.org/abs/2410.06554</a>
+                </li>
+                <li>
+                    <strong>Unveiling In-Context Learning: A Coordinate System to Understand Its Working Mechanism</strong><br>
+                    Anhao Zhao, Fanghua Ye, Jinlan Fu, Xiaoyu Shen, arXiv, 2024.<br>
+                    <a href="https://arxiv.org/pdf/2407.17011" target="_blank">https://arxiv.org/pdf/2407.17011</a>
+                </li>
+                <li>
+                    <strong>To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large Language Models</strong><br>
+                    Junyan Lin, Haoran Chen, Dawei Zhu, Xiaoyu Shen, arXiv, 2024.<br>
+                    <a href="http://arxiv.org/abs/2410.06765" target="_blank">http://arxiv.org/abs/2410.06765</a>
+                </li>
+                <li>
+                    <strong>Deeper Insights Without Updates: The Power of In-Context Learning Over Fine-Tuning</strong><br>
+                    Qingyu Yin, Xuzheng He, Luoao Deng, Chak Tou Leong, Fan Wang, Yanzhao Yan, Xiaoyu Shen, Qiang Zhang, arXiv, 2024.<br>
+                    <a href="https://arxiv.org/abs/2410.04691" target="_blank">https://arxiv.org/abs/2410.04691</a>
+                </li>
+                <li>
+                    <strong>LawBench: Benchmarking Legal Knowledge of Large Language Models</strong><br>
+                    Zhiwei Fei, Xiaoyu Shen, Dawei Zhu, Fengzhe Zhou, Zhuo Han, Alan Huang, Songyang Zhang, Kai Chen, Zhixin Yin, Zongwen Shen, Jidong Ge, Vincent Ng, arXiv, 2023.<br>
+                    <a href="https://arxiv.org/pdf/2309.16289" target="_blank">https://arxiv.org/pdf/2309.16289</a>
+                </li>
+                <li>
+                    <strong>Assessing "Implicit" Retrieval Robustness of Large Language Models</strong><br>
+                    Xiaoyu Shen, Rexhina Blloshmi, Dawei Zhu, Jiahuan Pei, Wei Zhang, arXiv, 2024.<br>
+                    <a href="https://arxiv.org/pdf/2406.18134" target="_blank">https://arxiv.org/pdf/2406.18134</a>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 EIT NLP. 保留所有权利。</p>
+    </footer>
+</body>
+</html>

@@ -1,124 +1,536 @@
-:root {
-    --primary-color: #000;
-    --secondary-color: #fff;
-    --accent-color: #f1c40f;
-    --text-color: #333;
-    --background-color: #f4f4f4;
-}
-
-* {
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
 }
 
-nav {
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+/* 修改 header h1 的样式 */
+header h1 {
+    margin: 0;
+    font-size: 2rem; /* 将字体大小从 1.5rem 增加到 2rem */
+    font-weight: bold; /* 添加粗体效果 */
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: 300;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--accent-color);
-}
-
-#langToggle {
-    background-color: transparent;
-    border: 1px solid var(--secondary-color);
-    color: var(--secondary-color);
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#langToggle:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-}
-
-main {
-    padding: 6rem 0 2rem;
-    min-height: calc(100vh - 100px);
-}
-
-h1, h2 {
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
+nav {
+    margin-top: 0;
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
-    nav {
+nav ul li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+/* 移除 nav ul li:first-child 的特殊样式 */
+nav ul li:first-child {
+    margin-right: 0;
+    flex-grow: 0;
+}
+
+/* 移除 nav ul li:not(:first-child) 的样式 */
+nav ul li:not(:first-child) {
+    flex-grow: 0;
+    margin-left: 0;
+}
+
+/* 修改 nav ul li a 的样式 */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.7rem; /* 将字体大小从 1.3rem 增加到 1.7rem */
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+/* 为 EIT NLP 添加特殊样式，使其比其他导航项更大 */
+nav ul li:first-child h1 {
+    font-size: 2rem; /* 将 EIT NLP 的字体设置得比其他导航项更大 */
+    margin: 0;
+    padding: 0.5rem 1rem;
+    color: #fff;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem; /* 增加上下内边距 */
+    position: relative; /* 改为相对定位 */
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem; /* 添加顶部外边距 */
+}
+
+footer p {
+    margin: 0;
+    padding: 0.5rem 0; /* 为段落添加一些内边距 */
+}
+
+@media (max-width: 768px) {
+    .header-content {
         flex-direction: column;
     }
 
-    nav ul {
+    nav {
+        width: 100%;
         margin-top: 1rem;
     }
 
-    nav ul li {
-        margin-left: 0;
-        margin-right: 20px;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+/* 在文件末尾添加或修改以下样式 */
+
+.hero-image {
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    animation: changeBackground 10s infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+@keyframes changeBackground {
+    0%, 45% {
+        background-image: url('zhuye/cd2f94e30d323c09c9ec417968f20d2.jpg');
+    }
+    55%, 100% {
+        background-image: url('zhuye/ab30ce9b7d3deceacbfccc54193a4e2.jpg');
+    }
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.hero-text h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text a {
+    font-size: 1.8em;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* 在文件末尾添加以下样式 */
+
+.about-us-text {
+    font-size: 1.2rem; /* 增大字体大小 */
+    line-height: 1.8; /* 增加行高以提高可读性 */
+    margin-bottom: 2rem; /* 增加底部边距 */
+}
+
+/* 在文件末尾添加以下样式 */
+section h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+section p a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section p a:hover {
+    text-decoration: underline;
+}
+
+/* 在文件末尾添加以下样式 */
+
+.publication-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.publication {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.publication.reverse {
+    flex-direction: row-reverse;
+}
+
+.publication img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.publication.reverse img {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.publication-content {
+    flex: 1;
+}
+
+.publication-content h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.publication-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .publication, .publication.reverse {
+        flex-direction: column;
+    }
+
+    .publication img, .publication.reverse img {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
+/* 在文件末尾添加以下样式 */
+
+/* 通用链接样式 */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #004080;
+}
+
+/* 为链接添加下划线动画效果 */
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #0066cc;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* 为按钮样式的链接（如 "learn more"）添加特殊样式 */
+.hero-text a, .button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #0066cc;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #0066cc;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.hero-text a:hover, .button-link:hover {
+    background-color: #0066cc;
+    color: white;
+}
+
+.hero-text a::after, .button-link::after {
+    display: none;
+}
+
+/* 在文件末尾添加以下样式 */
+
+.team-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.pi-introduction {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.pi-introduction h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.pi-introduction h3 {
+    color: #0066cc;
+    margin-top: 20px;
+}
+
+.pi-introduction p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* 在文件末尾添加以下样式 */
+
+.members {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.members h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.members ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.members li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.members li:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* 在文件末尾添加以下样式 */
+
+.recruitment-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.recruitment-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
+/* 在文件末尾添加以下样式 */
+
+.job-description {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.job-description h2, .job-description h3, .job-description h4 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.job-description h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.job-description ol, .job-description ul {
+    padding-left: 20px;
+}
+
+.job-description li {
+    margin-bottom: 10px;
+}
+
+.job-description p {
+    margin-bottom: 15px;
+}
+
+/* 在文件末尾添加以下样式 */
+
+.job-description h2 i,
+.job-description h3 i {
+    margin-right: 10px;
+    color: #0066cc;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.fa-bounce {
+    animation: bounce 2s infinite;
+}
+
+/* 在文件末尾添加以下样式 */
+
+.contact-info {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-info h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* 在文件末尾添加以下样式 */
+
+.paper-list {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.paper-list h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.paper-list ol {
+    padding-left: 20px;
+}
+
+.paper-list li {
+    margin-bottom: 20px;
+}
+
+.paper-list strong {
+    color: #0066cc;
+}
+
+.paper-list a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.paper-list a:hover {
+    text-decoration: underline;
 }
