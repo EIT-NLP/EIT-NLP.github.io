@@ -12,10 +12,10 @@
             <nav>
                 <ul>
                     <li><h1>EIT NLP</h1></li>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="research.html">研究</a></li>
-                    <li><a href="team.html">团队</a></li>
-                    <li><a href="recruitment.html">招聘</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="recruitment.html">Recruitment</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,14 +27,18 @@
             <p>We are a vibrant team led by Xiaoyu Shen—including PhDs, research engineers, and interns—comes together with a shared passion for advancing natural language processing (NLP). We're dedicated to developing innovative algorithms that enable machines to truly understand, generate, and reason with human language.</p>
         </section>
 
-        <section id="pi-introduction">
+        <section class="team-member">
             <h2>PI Introduction</h2>
-            <div class="pi-info">
-                <img src="path/to/xiaoyu_shen_photo.jpg" alt="Xiaoyu Shen" class="pi-photo">
-                <div class="pi-details">
-                    <h3>Xiaoyu Shen</h3>
-                    <p>Xiaoyu Shen, Assistant Professor and Ph.D. Supervisor in the Department of Informatics, received his B.S. degree from Nanjing University (2015) and Ph.D. degree from Max Planck Institute for Computer Science, Germany (2020). He studied under ACM fellow Gerhard Weikum and Dietrich Klakow. after his PhD graduation, he worked as a machine learning scientist at Amazon Alexa AI (2020-2023), and led the development of Amazon's intelligent customer service Q&A system. His main research interests include hidden variable Bayesian modeling, text generation, Q&A, fine-tuning and multimodal alignment of large language models, and he has published more than 40 papers in top international conferences such as ACL, EMNLP, ICLR, etc. He has been cited more than 2,600 times in Google Scholar, and his H-index = 21. He has been awarded the Outstanding Graduation Thesis of Nanjing University, National Scholarship, Max Planck Society D. Scholarship, Outstanding Privately Financed International Student Scholarship, COLING2020 Best Demo Paper Award, ACL2023 Outstanding Paper Award and Best Topic Paper Award. He is a committee member of several top conferences and journals including ACL, EMNLP, NAACL, AAAI, TOIS, a domain chair of ACL Q&A Directions, and a theme editor of High-Performance Computing for AI in Big Model Era. The lab has deep communication with the corporate world, participating in several projects with WeChat AI and Alibaba, and co-publishing 7 top conference papers. It has collaborative projects with several top research organizations such as MILA, Google, Meta, Salesforce, etc., which provide abundant internship opportunities.</p>
-                </div>
+            <div class="member-info">
+                <img src="images/xiaoyu_shen.jpg" alt="Xiaoyu Shen">
+                <h3>Xiaoyu Shen</h3>
+                <p>Associate Researcher and Ph.D. Supervisor</p>
+            </div>
+            <div class="member-bio">
+                <p>Xiaoyu Shen graduated from Nanjing University School of Software in 2015 as an undergraduate, and then received his PhD degree from Max Planck Institute for Information Research and Saarland University Graduate School in Germany, under the supervision of Gerhard Weikum and Dietrich Klakow. His research interests mainly include hidden variable Bayesian modeling, dialog generation, Q&A systems, etc.</p>
+                <p>In September 2020, he joined Amazon Alexa AI Berlin R&D Center as a Machine Learning Scientist position, leading the Alexa Intelligent Customer Service Merchandise Q&A project. He joined Oriental Institute of Technology Advanced Research Institute in November 2023 as an Associate Researcher and Ph.D. Supervisor, jointly cultivating Ph.D. students with Shanghai Jiaotong University, China University of Science and Technology and Hong Kong Polytechnic University.</p>
+                <p>He has published several papers in top conferences on artificial intelligence and natural language processing, such as ACL, ICML, EMNLP, ICSE. He has won the National Scholarship, Outstanding Graduate of Nanjing University, Outstanding Graduation Design, National Outstanding Overseas Privately Financed Students, COLING Best Demo Paper Award, ACL Best Topic Paper Award, and CIS-RAM Best Paper Award Nomination.</p>
+                <p>He has given many invited presentations at the University of Tokyo, Cambridge University, Google Brain, etc. He is a committee member of several top conferences and journals including ACL, EMNLP, AISTAS, NeurIPS, TOIS, a domain chair of ACL Q&A Direction, and a theme editor of High-Performance Computing for AI in Big Model Era.</p>
             </div>
         </section>
 
@@ -82,5 +86,39 @@
     <footer>
         <p>&copy; 2023 EIT NLP. 保留所有权利。</p>
     </footer>
+
+    <script>
+        function changeLanguage() {
+            var language = document.getElementById("languageSelect").value;
+            if (language === "zh") {
+                // 切换到中文版本
+                document.title = "EIT NLP - 团队";
+                document.querySelector('h1').textContent = "我们的团队";
+                // 更新导航栏
+                document.querySelector('a[href="index.html"]').textContent = "首页";
+                document.querySelector('a[href="research.html"]').textContent = "研究";
+                document.querySelector('a[href="team.html"]').textContent = "团队";
+                document.querySelector('a[href="recruitment.html"]').textContent = "招聘";
+                // 更新页脚
+                document.querySelector('footer p').textContent = "© 2023 EIT NLP. 保留所有权利。";
+                
+                // 更新团队成员信息（根据实际内容进行翻译）
+                const members = document.querySelectorAll('.team-member');
+                members.forEach(member => {
+                    const name = member.querySelector('h2');
+                    const role = member.querySelector('p');
+                    // 这里需要为每个成员准备中文翻译
+                    if (name.textContent === "John Doe") {
+                        name.textContent = "约翰·多伊";
+                        role.textContent = "首席研究员";
+                    }
+                    // 继续为其他成员添加翻译...
+                });
+            } else {
+                // 保持英文版本或刷新页面
+                location.reload();
+            }
+        }
+    </script>
 </body>
 </html>

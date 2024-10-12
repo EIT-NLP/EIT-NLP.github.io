@@ -63,5 +63,30 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function changeLanguage() {
+            var language = document.getElementById("languageSelect").value;
+            if (language === "zh") {
+                // 切换到中文版本
+                document.title = "EIT NLP - 首页";
+                document.querySelector('h1').textContent = "EIT NLP";
+                // 更新导航栏
+                document.querySelector('a[href="index.html"]').textContent = "首页";
+                document.querySelector('a[href="research.html"]').textContent = "研究";
+                document.querySelector('a[href="team.html"]').textContent = "团队";
+                document.querySelector('a[href="recruitment.html"]').textContent = "招聘";
+                // 更新页脚
+                document.querySelector('footer p').textContent = "© 2023 EIT NLP. 保留所有权利。";
+                
+                // 更新主要内容（根据实际内容进行翻译）
+                document.querySelector('h2').textContent = "欢迎来到 EIT NLP";
+                document.querySelector('p').textContent = "我们是一个致力于自然语言处理研究的团队。";
+                // 继续翻译其他内容...
+            } else {
+                // 保持英文版本或刷新页面
+                location.reload();
+            }
+        }
+    </script>
 </body>
 </html>

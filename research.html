@@ -16,6 +16,12 @@
                     <li><a href="research.html">Research</a></li>
                     <li><a href="team.html">Team</a></li>
                     <li><a href="recruitment.html">Recruitment</a></li>
+                    <li class="language-switch">
+                        <select id="languageSelect" onchange="changeLanguage()">
+                            <option value="en">English</option>
+                            <option value="zh">中文</option>
+                        </select>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -106,5 +112,59 @@
     <footer>
         <p>&copy; 2023 EIT NLP. All rights reserved.</p>
     </footer>
+
+    <script>
+        function changeLanguage() {
+            var language = document.getElementById("languageSelect").value;
+            if (language === "zh") {
+                // 切换到中文版本
+                document.title = "EIT NLP - 研究";
+                document.querySelector('h1').textContent = "出版物";
+                // 更新导航栏
+                document.querySelector('a[href="index.html"]').textContent = "首页";
+                document.querySelector('a[href="research.html"]').textContent = "研究";
+                document.querySelector('a[href="team.html"]').textContent = "团队";
+                document.querySelector('a[href="recruitment.html"]').textContent = "招聘";
+                // 更新页脚
+                document.querySelector('footer p').textContent = "© 2023 EIT NLP. 保留所有权利。";
+                
+                // 更新出版物内容
+                const publications = document.querySelectorAll('.publication-content');
+                publications.forEach((pub, index) => {
+                    const h2 = pub.querySelector('h2');
+                    const paragraphs = pub.querySelectorAll('p');
+                    
+                    // 这里需要为每个出版物准备中文翻译
+                    const chineseTitles = [
+                        "微调大型语言模型以进行翻译：在不对齐语言中添加少量噪声数据是否足够？",
+                        "RLHF中的准确性悖论：为什么更好的奖励模型不一定产生更好的语言模型",
+                        "揭示上下文学习：理解其工作机制的坐标系统",
+                        "保留还是压缩：多模态大型语言模型中连接器选择的深入研究",
+                        "无需更新的深入洞察：上下文学习相对于微调的优势",
+                        "LawBench：基准测试大型语言模型的法律知识",
+                        "评估大型语言模型的"隐式"检索鲁棒性"
+                    ];
+                    
+                    h2.textContent = chineseTitles[index];
+                    paragraphs[0].innerHTML = paragraphs[0].innerHTML.replace('Authors:', '作者：');
+                    paragraphs[1].innerHTML = paragraphs[1].innerHTML.replace('Paper address:', '论文地址：');
+                    paragraphs[2].innerHTML = paragraphs[2].innerHTML.replace('Code:', '代码：');
+                    
+                    // 这里需要为每个出版物的描述准备中文翻译
+                    const chineseDescriptions = [
+                        "论文描述：传统上，多语言机器翻译的成功归因于训练数据的三个关键因素：大规模数据量、多样化的翻译方向和高质量数据。在当前微调大型语言模型（LLMs）进行翻译的实践中，我们重新审视了这些因素的重要性。我们发现，LLMs在仅使用32对平行句子进行微调时就表现出强大的翻译能力，并且微调单一翻译方向可以实现多方向翻译。然而，方向的选择至关重要：仅使用英语作为目标语言进行微调可能导致任务误解，从而阻碍了向非英语语言的翻译。当使用噪声合成数据作为目标语言时，特别是当目标语言在LLM预训练中已得到良好表示时，也可能出现问题。然而，值得注意的是，合成数据对预训练中表示不佳的语言的影响较小。我们的结果表明，在将LLMs适应翻译任务时，可以适当放宽数据量要求，但仍需谨慎考虑，以防止LLMs利用非预期的数据偏差。",
+                        // 为其他出版物添加中文描述
+                    ];
+                    
+                    const descriptionParagraph = paragraphs[paragraphs.length - 1];
+                    descriptionParagraph.innerHTML = descriptionParagraph.innerHTML.replace(/Paper Description:|Paper Introduction:|Abstract:|Thesis Statement:|Dissertation Synopsis:/, '论文描述：');
+                    descriptionParagraph.textContent = chineseDescriptions[index];
+                });
+            } else {
+                // 保持英文版本或刷新页面
+                location.reload();
+            }
+        }
+    </script>
 </body>
 </html>
