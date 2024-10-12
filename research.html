@@ -43,7 +43,7 @@
                     <p><strong>作者：</strong>Yanjun Chen, Dawei Zhu, Yirong Sun, Xinghao Chen, Wei Zhang, Xiaoyu Shen</p>
                     <p><strong>论文地址：</strong><a href="https://arxiv.org/abs/2410.06554" target="_blank">https://arxiv.org/abs/2410.06554</a></p>
                     <p><strong>代码：</strong><a href="https://github.com/EIT-NLP/AccuracyParadox-RLHF" target="_blank">https://github.com/EIT-NLP/AccuracyParadox-RLHF</a></p>
-                    <p><strong>论文简介：</strong>人类反馈强化学习显著提升了自然语言处理的效果，通过训练使语言模型更符合人类预期。在这一过程中，奖励模型的强度是关键因素之一。本研究探讨了更强的奖励模型是否必然导致更优的语言模型表现。本文通过使用QA-FEEDBACK数据集和基于Longformer的奖励模型，针对相关性、事实性和完整性任务进行实验，揭示了一个令人惊讶的悖论：训练时使用中等准确率奖励模型的语言模型表现优于那些使用高准确率奖励模型的语言模型。这一发现挑战了普遍认为更强的奖励模型总是带来更好语言模型表现的观点，同时为未来关于影响模型表现的关键因素及如何选择合适奖励模型的研究开辟了新方向。</p>
+                    <p><strong>论文简介：</strong>人类反馈强化学习显著提升了自然语言处理的效果，通过训练使语言模型更符合人类预期。在这一过程中，奖励模型的强度是关键因素之一。本研究探讨了更强的奖励模型是否必然导致更优的语言模型表现。本文通过使用QA-FEEDBACK数据集和基于Longformer的奖励模型，针对相关性、事实性和完整性任务进行实验，揭示了一个令人惊讨的悖论：训练时使用中等准确率奖励模型的语言模型表现优于那些使用高准确率奖励模型的语言模型。这一发现挑战了普遍认为更强的奖励模型总是带来更好语言模型表现的观点，同时为未来关于影响模型表现的关键因素及如何选择合适奖励模型的研究开辟了新方向。</p>
                 </div>
             </div>
 
@@ -59,34 +59,45 @@
             </div>
 
             <div class="publication reverse">
-                <img src="path/to/image4.jpg" alt="文章四图片">
+                <img src="path/to/image4.jpg" alt="To Preserve or To Compress">
                 <div class="publication-content">
-                    <h2>文章四</h2>
-                    <p>文章四的具体介绍。</p>
+                    <h2>To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large Language Models</h2>
+                    <p><strong>作者：</strong>Junyan Lin, Haoran Chen, Dawei Zhu, Xiaoyu Shen</p>
+                    <p><strong>论文地址：</strong><a href="http://arxiv.org/abs/2410.06765" target="_blank">http://arxiv.org/abs/2410.06765</a></p>
+                    <p><strong>代码：</strong><a href="https://github.com/EIT-NLP/Connector-Selection-for-MLLM" target="_blank">https://github.com/EIT-NLP/Connector-Selection-for-MLLM</a></p>
+                    <p><strong>论文简介：</strong>近年来，多模态大型语言模型（MLLMs）引起了产业界和学术界的广泛关注。根据融合位置的不同，MLLMs可分为外部融合和内部融合架构，其中外部融合架构占主导地位。然而，关于如何构建最优的外部融合MLLM架构，尤其是不同连接器在不同粒度任务中的表现，仍存在较大争议。本文系统地探讨了连接器对MLLM性能的影响。具体而言，我们将连接器分为保留特征型和压缩特征型两类。通过统一的分类标准，我们将来自三个综合基准数据集（MMBench、MME、SEED-Bench）的子任务划分为粗粒度感知、细粒度感知和推理三种任务类型，并从此角度评估连接器的性能。研究结果显示，在不同任务中，不同类型连接器的性能差异显著，这为MLLM架构设计提供了重要指导，并推动了MLLM架构优化的理解和发展。</p>
                 </div>
             </div>
 
             <div class="publication">
-                <img src="path/to/image5.jpg" alt="文章五图片">
+                <img src="path/to/image5.jpg" alt="Deeper Insights Without Updates">
                 <div class="publication-content">
-                    <h2>文章五</h2>
-                    <p>文章五的具体介绍。</p>
+                    <h2>Deeper Insights Without Updates: The Power of In-Context Learning Over Fine-Tuning</h2>
+                    <p><strong>作者：</strong>Qingyu Yin, Xuzheng He, Luoao Deng, Chak Tou Leong, Fan Wang, Yanzhao Yan, Xiaoyu Shen, Qiang Zhang</p>
+                    <p><strong>论文地址：</strong><a href="https://arxiv.org/abs/2410.04691" target="_blank">https://arxiv.org/abs/2410.04691</a></p>
+                    <p><strong>代码：</strong><a href="https://github.com/MikaStars39/ICLvsFinetune" target="_blank">https://github.com/MikaStars39/ICLvsFinetune</a></p>
+                    <p><strong>论文简介：</strong>微调和上下文学习（ICL）是两种常用的为大型语言模型注入任务特定知识的方法。通常认为，微调由于可以基于训练数据调整模型的内部参数，在有足够样本的情况下会优于ICL。然而，本文提出了一个反直觉的发现：对于隐式模式任务，ICL能够显著优于微调捕捉这些模式。我们构建了多个包含隐式模式的数据集，例如通过奇偶性确定答案的序列或在计算中识别可约项。然后，我们在参数规模从0.5B到7B的模型上，分别评估了在微调和ICL条件下模型对这些模式的理解。结果表明，采用ICL的模型可以快速掌握深层模式，并显著提高准确性。相反，尽管微调使用了比ICL多数千倍的训练样本，但其性能提升有限。我们还从机械可解释性的角度提出了电路迁移理论，解释了为何ICL在这类任务上表现更好。</p>
                 </div>
             </div>
 
             <div class="publication reverse">
-                <img src="path/to/image6.jpg" alt="文章六图片">
+                <img src="path/to/image6.jpg" alt="LawBench: Benchmarking Legal Knowledge of Large Language Models">
                 <div class="publication-content">
-                    <h2>文章六</h2>
-                    <p>文章六的具体介绍。</p>
+                    <h2>LawBench: Benchmarking Legal Knowledge of Large Language Models</h2>
+                    <p><strong>作者：</strong>Zhiwei Fei, Xiaoyu Shen, Dawei Zhu, Fengzhe Zhou, Zhuo Han, Alan Huang, Songyang Zhang, Kai Chen, Zhixin Yin, Zongwen Shen, Jidong Ge, Vincent Ng</p>
+                    <p><strong>论文地址：</strong><a href="https://arxiv.org/pdf/2309.16289" target="_blank">https://arxiv.org/pdf/2309.16289</a></p>
+                    <p><strong>代码：</strong><a href="https://github.com/open-compass/LawBench/" target="_blank">https://github.com/open-compass/LawBench/</a></p>
+                    <p><strong>论文简介：</strong>我们提出了LawBench，这是第一个由20个任务组成的评估基准，旨在评估大型语言模型（LLMs）在处理中文法律相关任务中的表现。LawBench经过精心设计，能够从广泛接受的布卢姆认知分类法对应的三个认知层次上，精确评估LLMs的法律能力。利用LawBench，我们对21个热门LLMs进行了全面的评估，并首次对其实际表现进行了比较分析，揭示了它们的相对优势与劣势。所有数据、模型预测和评估代码均可从https://github.com/open-compass/LawBench获取。</p>
                 </div>
             </div>
 
             <div class="publication">
-                <img src="path/to/image7.jpg" alt="文章七图片">
+                <img src="path/to/image7.jpg" alt="Assessing Implicit Retrieval Robustness of Large Language Models">
                 <div class="publication-content">
-                    <h2>文章七</h2>
-                    <p>文章七的具体介绍。</p>
+                    <h2>Assessing "Implicit" Retrieval Robustness of Large Language Models</h2>
+                    <p><strong>作者：</strong>Xiaoyu Shen, Rexhina Blloshmi, Dawei Zhu, Jiahuan Pei, Wei Zhang</p>
+                    <p><strong>论文地址：</strong><a href="https://arxiv.org/pdf/2406.18134" target="_blank">https://arxiv.org/pdf/2406.18134</a></p>
+                    <p><strong>论文简介：</strong>检索增强生成（Retrieval-augmented generation，RAG）作为一种通过外部知识增强大型语言模型的框架，近年来备受关注。然而，其有效性在很大程度上依赖于模型的检索稳健性。如果模型缺乏检索稳健性，其性能将受限于检索器的准确性，当检索到的上下文与任务无关时，模型表现可能大幅下降。在本文中，我们评估了不同大型语言模型的"隐式"检索稳健性，要求它们直接输出最终答案，而不显式判断检索到的上下文的相关性。我们的研究表明，混合使用真实数据和干扰上下文进行微调，能够显著增强模型应对检索不准确的稳健性，同时在检索准确时仍能提取正确答案。这表明，大型语言模型可以通过仅从最终答案的监督中学习，以端到端的方式隐式处理相关或不相关的检索上下文。引入显式相关性判断的过程可能是不必要的，反而会破坏端到端方法的流畅性。</p>
                 </div>
             </div>
         </div>
