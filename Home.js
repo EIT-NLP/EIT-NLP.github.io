@@ -18,32 +18,44 @@ function Home() {
           className="home-image"
         />
       </div>
-      {/* ... 其他部分 ... */}
       
       <section className="news">
         <h2>News</h2>
         <div className="news-item">
+          <h3>To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large Language Models</h3>
+          <p>
+            Authors: Junyan Lin, Haoran Chen, Dawei Zhu, Xiaoyu Shen
+            <br />
+            <a href="http://arxiv.org/abs/2410.06765" target="_blank" rel="noopener noreferrer">Paper</a> | 
+            <a href="https://github.com/EIT-NLP/Connector-Selection-for-MLLM" target="_blank" rel="noopener noreferrer">Code</a>
+            <br />
+            This study explores the impact of connectors on the performance of Multimodal Large Language Models (MLLMs), providing important guidance for MLLM architecture design.
+          </p>
+        </div>
+        <div className="news-item">
           <h3>Fine-Tuning Large Language Models to Translate</h3>
           <p>
-            This study explores the effectiveness of fine-tuning Large Language Models for translation tasks with minimal data, challenging traditional assumptions about data requirements.
+            Authors: Dawei Zhu, Pinzhen Chen, Miaoran Zhang, Barry Haddow, Xiaoyu Shen, Dietrich Klakow
+            <br />
+            <a href="https://arxiv.org/pdf/2404.14122" target="_blank" rel="noopener noreferrer">Paper</a> | 
+            <a href="https://github.com/uds-lsv/mt-sft" target="_blank" rel="noopener noreferrer">Code</a>
+            <br />
+            This study revisits the importance of training data factors in fine-tuning LLMs for translation, revealing surprising findings about data volume and translation direction requirements.
           </p>
         </div>
         <div className="news-item">
           <h3>The Accuracy Paradox in RLHF</h3>
           <p>
-            This research reveals a surprising paradox in human feedback reinforcement learning, where medium-accuracy reward models can outperform high-accuracy ones in language model training.
-          </p>
-        </div>
-        <div className="news-item">
-          <h3>Unveiling In-Context Learning</h3>
-          <p>
-            This study proposes a two-dimensional coordinate system to explain the mechanisms of in-context learning in Large Language Models, unifying conflicting views on its working principles.
+            Authors: Yanjun Chen, Dawei Zhu, Yirong Sun, Xinghao Chen, Wei Zhang, Xiaoyu Shen
+            <br />
+            <a href="https://arxiv.org/abs/2410.06554" target="_blank" rel="noopener noreferrer">Paper</a> | 
+            <a href="https://github.com/EIT-NLP/AccuracyParadox-RLHF" target="_blank" rel="noopener noreferrer">Code</a>
+            <br />
+            This research reveals a surprising paradox in human feedback reinforcement learning, challenging the belief that stronger reward models always lead to better language model performance.
           </p>
         </div>
         <Link to="/publications" className="see-more">See more</Link>
       </section>
-
-      {/* ... 其他部分 ... */}
     </div>
   );
 }

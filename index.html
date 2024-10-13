@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EIT NLP - 首页</title>
+    <title>EIT NLP - Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,22 +34,41 @@
             <p class="about-us-text">Our research explores exciting areas like information retrieval, multi-modal learning, and chain-of-thought reasoning. A key focus of ours is to create highly efficient algorithms that deliver impressive performance while minimizing resource use. We strive to reduce reliance on extensive human annotation, streamline training times, and lower inference costs. Ultimately, our goal is to build models that excel across a variety of tasks while being resource-conscious and accessible to all. Join us on this journey to reshape the future of NLP!</p>
         </section>
 
-        <section>
+        <section class="news">
             <h2>News</h2>
             <ul>
                 <li>
-                    <strong>新论文发布：</strong> "To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large Language Models"
+                    <strong>New Paper Released:</strong> "To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large Language Models"
                     <br>
-                    作者：Junyan Lin, Haoran Chen, Dawei Zhu, Xiaoyu Shen
+                    Authors: Junyan Lin, Haoran Chen, Dawei Zhu, Xiaoyu Shen
                     <br>
-                    <a href="http://arxiv.org/abs/2410.06765" target="_blank">论文链接</a> | 
-                    <a href="https://github.com/EIT-NLP/Connector-Selection-for-MLLM" target="_blank">代码仓库</a>
+                    <a href="http://arxiv.org/abs/2410.06765" target="_blank">Paper</a> | 
+                    <a href="https://github.com/EIT-NLP/Connector-Selection-for-MLLM" target="_blank">Code Repository</a>
                     <br>
-                    本研究探讨了连接器对多模态大型语言模型（MLLMs）性能的影响，为MLLM架构设计提供了重要指导。
+                    This study explores the impact of connectors on the performance of Multimodal Large Language Models (MLLMs), providing important guidance for MLLM architecture design.
                 </li>
-                <li>新闻2</li>
-                <li>新闻3</li>
+                <li>
+                    <strong>Research Highlight:</strong> "Fine-Tuning Large Language Models to Translate: Will a Touch of Noisy Data in Misaligned Languages Suffice?"
+                    <br>
+                    Authors: Dawei Zhu, Pinzhen Chen, Miaoran Zhang, Barry Haddow, Xiaoyu Shen, Dietrich Klakow
+                    <br>
+                    <a href="https://arxiv.org/pdf/2404.14122" target="_blank">Paper</a> | 
+                    <a href="https://github.com/uds-lsv/mt-sft" target="_blank">Code Repository</a>
+                    <br>
+                    This study revisits the importance of training data factors in fine-tuning LLMs for translation, revealing surprising findings about data volume and translation direction requirements.
+                </li>
+                <li>
+                    <strong>Latest Publication:</strong> "The Accuracy Paradox in RLHF: When Better Reward Models Don't Yield Better Language Models"
+                    <br>
+                    Authors: Yanjun Chen, Dawei Zhu, Yirong Sun, Xinghao Chen, Wei Zhang, Xiaoyu Shen
+                    <br>
+                    <a href="https://arxiv.org/abs/2410.06554" target="_blank">Paper</a> | 
+                    <a href="https://github.com/EIT-NLP/AccuracyParadox-RLHF" target="_blank">Code Repository</a>
+                    <br>
+                    This research reveals a surprising paradox in human feedback reinforcement learning, challenging the belief that stronger reward models always lead to better language model performance.
+                </li>
             </ul>
+            <a href="/publications" class="see-more">See more</a>
         </section>
 
         <section>
@@ -59,34 +78,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 EIT NLP. 保留所有权利。</p>
+        <p>&copy; 2023 EIT NLP. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        function changeLanguage() {
-            var language = document.getElementById("languageSelect").value;
-            if (language === "zh") {
-                // 切换到中文版本
-                document.title = "EIT NLP - 首页";
-                document.querySelector('h1').textContent = "EIT NLP";
-                // 更新导航栏
-                document.querySelector('a[href="index.html"]').textContent = "首页";
-                document.querySelector('a[href="research.html"]').textContent = "研究";
-                document.querySelector('a[href="team.html"]').textContent = "团队";
-                document.querySelector('a[href="recruitment.html"]').textContent = "招聘";
-                // 更新页脚
-                document.querySelector('footer p').textContent = "© 2023 EIT NLP. 保留所有权利。";
-                
-                // 更新主要内容（根据实际内容进行翻译）
-                document.querySelector('h2').textContent = "欢迎来到 EIT NLP";
-                document.querySelector('p').textContent = "我们是一个致力于自然语言处理研究的团队。";
-                // 继续翻译其他内容...
-            } else {
-                // 保持英文版本或刷新页面
-                location.reload();
-            }
-        }
-    </script>
 </body>
 </html>

@@ -21,3 +21,24 @@
   max-width: 45%;
   height: auto;
 }
+
+.news-item {
+  margin-bottom: 20px;
+}
+
+.news-item h3 {
+  margin-bottom: 10px;
+}
+
+.news-item p {
+  margin-bottom: 5px;
+}
+
+.news-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.news-item a:hover {
+  text-decoration: underline;
+}
