@@ -21,6 +21,7 @@ Current interns:
 - Tiantian Mei (Shanxi Tech) 
 
 Former interns: 
+- Dawei Zhu (-> Amazon AGI) 
 - Yanjun Chen (-> PhD at HK PolyU) 
 - Dianyi Wang (-> PhD at Fudan) 
 - Shujian Jiao (-> MS at ZJU) 
