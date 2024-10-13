@@ -55,7 +55,7 @@
             </div>
             <div class="article-content">
                 <h2>微调大语言模型进行翻译：少量不对齐语言的噪声数据是否足够？</h2>
-                <p><strong>作者：</strong>朱大为, 陈品真, 张妙然, Barry Haddow, 沈晓宇, Dietrich Klakow</p>
+                <p><strong>作者：</strong>朱大卫, 陈品真, 张妙然, Barry Haddow, 沈晓宇, Dietrich Klakow</p>
                 <p><strong>论文地址：</strong><a href="https://arxiv.org/pdf/2404.14122" target="_blank">https://arxiv.org/pdf/2404.14122</a></p>
                 <p><strong>代码：</strong><a href="https://github.com/uds-lsv/mt-sft" target="_blank">https://github.com/uds-lsv/mt-sft</a></p>
                 <p><strong>论文简介：</strong>传统上，多语言机器翻译的成功归因于训练数据的三个关键因素：大规模数据量、多样化的翻译方向以及高质量的数据。在当前微调大语言模型（LLMs）以进行翻译的实践中，我们重新审视了这些因素的重要性。我们现，LLMs 在仅微调 32 对平行句子的情况下就表现出了强大的翻译能力，并且微调单一翻译方向能够实现多方向的翻译。然而，方向的选择至关重要：仅使用英文作为目标语言进行微调可能导致任务误解，从而阻碍向非英语语言的翻译。当噪声合成数据作为目标语言时，特别是当目标语言在 LLM 预训练中已得到良好表示的情况下，也会出现问题。然而，值得注意的是，合成数据对一个在预训练中代表性较低的语言的影响较为轻微。我们的研究结果表明，在将 LLMs 适配于翻译任务时，对数据量的要求可以适当放宽，但仍需仔细考虑，以防止 LLM 利用非预期的数据偏差。</p>
@@ -68,7 +68,7 @@
             </div>
             <div class="article-content">
                 <h2>RLHF中的准确性悖论：为什么更好的奖励模型不一定产生更好的语言模型</h2>
-                <p><strong>作者：</strong>陈彦君, 朱大为, 孙一荣, 陈星皓, 张伟, 沈晓宇</p>
+                <p><strong>作者：</strong>陈彦君, 朱大卫, 孙一荣, 陈星皓, 张伟, 沈晓宇</p>
                 <p><strong>论文地址：</strong><a href="https://arxiv.org/abs/2410.06554" target="_blank">https://arxiv.org/abs/2410.06554</a></p>
                 <p><strong>代码：</strong><a href="https://github.com/EIT-NLP/AccuracyParadox-RLHF" target="_blank">https://github.com/EIT-NLP/AccuracyParadox-RLHF</a></p>
                 <p><strong>论文简介：</strong>人类反馈强化学习显著提升了自然语言处理的效果，通过训练使语言模型更符合人类预期。在这一过程中，奖励模型的强度是关键因素之一。本研究探讨了更强的奖励模型是否必然导致更优的语言模型表现。本文通过使用QA-FEEDBACK数据集和基于Longformer的奖励模型，针对相关性、事实性和完整性任务进行实验，揭示了一个令人惊讽的悖论：训练时使用中等准确率奖励模型的语言模型表现优于那些使用高准确率奖励模型的语言模型。这一发现挑战了普遍认为更强的奖励模型总是带来更好语言模型表现的观点，同时为未来关于影响模型表现的关键因素及如何选择合适奖励模型的研究开辟了新方向。</p>
@@ -84,7 +84,7 @@
                 <p><strong>作者：</strong>赵桉颢, 叶方华, 付瑾兰, 沈晓宇</p>
                 <p><strong>论文地址：</strong><a href="https://arxiv.org/pdf/2407.17011" target="_blank">https://arxiv.org/pdf/2407.17011</a></p>
                 <p><strong>代码：</strong><a href="https://github.com/EIT-NLP/2D-Coordinate-System-for-ICL" target="_blank">https://github.com/EIT-NLP/2D-Coordinate-System-for-ICL</a></p>
-                <p><strong>论文简介：</strong>大型语言模型（LLMs）展现了显著的上下文学习（ICL）能力，然而其背后的工作机制仍未被充分理解。现有研究对ICL提出了两种相互矛盾的观点：一种强调演示中相似样本的重要性，指出标签正确性和更多示例的重要性；另一种则将ICL归因于LLM固有的任务识别能力，认为标签正确性和示例数量并非关键。在本研究中，我们提出了一个二维坐标系统，将这两种观点统一在一个系统框架中。该框架通过两个正交变量解释ICL的行为：演示中是否包含相似样本（感知）以及LLMs是否能够识别任务（认知）。我们提出了峰值逆排名指标，用于检测LLMs的任务识别能力，并研究了LLMs对不同相似性定义的反应。基于此，我们进行了广泛���实验，以阐明ICL在多个代表性分类任务中的表现。最后，我们将分析扩展到生成任务，表明该坐标系统同样可以有效解释ICL在生成任务中的工作机制。</p>
+                <p><strong>论文简介：</strong>大型语言模型（LLMs）展现了显著的上下文学习（ICL）能力，然而其背后的工作机制仍未被充分理解。现有研究对ICL提出了两种相互矛盾的观点：一种强调演示中相似样本的重要性，指出标签正确性和更多示例的重要性；另一种则将ICL归因于LLM固有的任务识别能力，认为标签正确性和示例数量并非关键。在本研究中，我们提出了一个二维坐标系统，将这两种观点统一在一个系统框架中。该框架通过两个正交变量解释ICL的行为：演示中是否包含相似样本（感知）以及LLMs是否能够识别任务（认知）。我们提出了峰值逆排名指标，用于检测LLMs的任务识别能力，并研究了LLMs对不同相似性定义的反应。基于此，我们进行了广泛实验，以阐明ICL在多个代表性分类任务中的表现。最后，我们将分析扩展到生成任务，表明该坐标系统同样可以有效解释ICL在生成任务中的工作机制。</p>
             </div>
         </div>
 
@@ -94,7 +94,7 @@
             </div>
             <div class="article-content">
                 <h2>保留还是压缩：多模态大型语言模型连接器选择的深入研究</h2>
-                <p><strong>作者：</strong>林俊彦, 陈浩然, 朱大为, 沈晓宇</p>
+                <p><strong>作者：</strong>林俊彦, 陈浩然, 朱大卫, 沈晓宇</p>
                 <p><strong>论文地址：</strong><a href="http://arxiv.org/abs/2410.06765" target="_blank">http://arxiv.org/abs/2410.06765</a></p>
                 <p><strong>代码：</strong><a href="https://github.com/EIT-NLP/Connector-Selection-for-MLLM" target="_blank">https://github.com/EIT-NLP/Connector-Selection-for-MLLM</a></p>
                 <p><strong>论文简介：</strong>近年来，多模态大型语言模型（MLLMs）引起了产业界和学术界的广泛关注。根据融合位置的不同，MLLMs分为外部融合和内部融合架构，其中外部融合架构占主导地位。然而，关如何构建最优的外部融合MLLM架构，尤其是不同连接器在不同粒度任务中的表现，仍存在较大争议。本文系统地探讨了连接器对MLLM性能的影响。具体而言，我们将连接器分为保留特征型和缩特征型两类。通过统一的分类标准，我们将来自三个综合基准数据集（MMBench、MME、SEED-Bench）的子任务划分为粗粒度感知、细粒度感知和推理三种任务类型，并从此角度评估连接器的性能。研究结果显示，在不同任务中，不同类型连接器的性能差异显著，这为MLLM架构设计提供了重要指导，并推动了MLLM架构优化的理解和发展。</p>
@@ -120,7 +120,7 @@
             </div>
             <div class="article-content">
                 <h2>LawBench：评估大型语言模型的法律知识基准</h2>
-                <p><strong>作者：</strong>费志伟, 沈晓宇, 朱大为, 周丰哲, 韩卓, Alan Huang, 张松阳, 陈凯, 尹志新, 沈宗文, 葛季栋, Vincent Ng</p>
+                <p><strong>作者：</strong>费志伟, 沈晓宇, 朱大卫, 周丰哲, 韩卓, Alan Huang, 张松阳, 陈凯, 尹志新, 沈宗文, 葛季栋, Vincent Ng</p>
                 <p><strong>论文地址：</strong><a href="https://arxiv.org/pdf/2309.16289" target="_blank">https://arxiv.org/pdf/2309.16289</a></p>
                 <p><strong>代码：</strong><a href="https://github.com/open-compass/LawBench/" target="_blank">https://github.com/open-compass/LawBench/</a></p>
                 <p><strong>论文简介：</strong>我们提出了LawBench，这是第一个由20个任务组成的评估基准，旨在评估大型语言模型（LLMs）在处理中文法律相关任务中的表现。LawBench经过精心设计，能够从广泛接受的布卢姆认知分类法对应的三个认知层次上，精确评估LLMs的法律能力。利用LawBench，我们对21个热门LLMs进行了全面的评估，并首次对其实际表现进行了比较分析，揭示了们的相对优势与劣势。所有数据、模型预测和评估代码均可从
@@ -134,7 +134,7 @@
             </div>
             <div class="article-content">
                 <h2>评估大型语言模型的"隐式"检索稳健性</h2>
-                <p><strong>作者：</strong>沈晓宇, Rexhina Blloshmi, 朱大为, 裴嘉欢, 张伟</p>
+                <p><strong>作者：</strong>沈晓宇, Rexhina Blloshmi, 朱大卫, 裴嘉欢, 张伟</p>
                 <p><strong>论文地址：</strong><a href="https://arxiv.org/pdf/2406.18134" target="_blank">https://arxiv.org/pdf/2406.18134</a></p>
                 <p><strong>论文简介：</strong>检索增强生成（Retrieval-augmented generation，RAG）作为一种通过外部知识增强大型语言模型的框架，近年来备受关注。然而，其有效性在很大程度上依赖于模型的检索稳健性。如果模型缺乏检索稳健性，其性能将受限于检索器的准确性，当检索到的上下文与任务无关时，模型表现可能大幅下降。在本文中，我们评估了不同大型语言模型的"隐式"检索稳健性，要求它们直接输出最终答案，而不显式判断检索到的上下文的相关性。我们的研究表明，混合使用真实数据和干扰上下文进行微调，能够显著增强模型应对检索不准确的稳健性，同时在检索准确时仍能提取正确答案。这表明，大型语言模型可以通过仅从最终答案的监督中学习，以端到端的方式隐式处理相关或不相关的检索上下文。引入显式相关性判断的过程可能是不必要的，反而会破坏端到端方法的流畅性。</p>
             </div>
