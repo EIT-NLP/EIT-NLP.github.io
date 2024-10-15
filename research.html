@@ -6,6 +6,28 @@
     <title>EIT NLP - Research</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    .article {
+        display: flex;
+        margin-bottom: 40px;
+        align-items: center;
+    }
+    .article-content {
+        flex: 1;
+        padding: 20px;
+    }
+    .article-image {
+        flex: 1;
+        text-align: center;
+    }
+    .article-image img {
+        max-width: 100%;
+        height: auto;
+    }
+    .article:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+</style>
 <body>
     <header>
         <div class="header-content">
@@ -26,10 +48,11 @@
     <main>
         <h1>Publications</h1>
 
-        <div class="publication-container">
-            <div class="publication">
+        <div class="article">
+            <div class="article-image">
                 <img src="./1to7/1.png" alt="Fine-Tuning Large Language Models to Translate">
-                <div class="publication-content">
+            </div> 
+            <div class="article-content">
                     <h2>Fine-Tuning Large Language Models to Translate: Will a Touch of Noisy Data in Misaligned Languages Suffice?</h2>
                     <p><strong>Authors:</strong> Dawei Zhu, Pinzhen Chen, Miaoran Zhang, Barry Haddow, Xiaoyu Shen, Dietrich Klakow</p>
                     <p><strong>Paper address:</strong> <a href="https://arxiv.org/pdf/2404.14122" target="_blank">https://arxiv.org/pdf/2404.14122</a></p>
@@ -39,9 +62,11 @@
                 </div>
             </div>
 
-            <div class="publication reverse">
+            <div class="article">
+            <div class="article-image">
                 <img src="./1to7/2.png" alt="The Accuracy Paradox in RLHF">
-                <div class="publication-content">
+            </div>
+            <div class="article-content">
                     <h2>The Accuracy Paradox in RLHF: When Better Reward Models Don't Yield Better Language Models</h2>
                     <p><strong>Author(s):</strong> Yanjun Chen, Dawei Zhu, Yirong Sun, Xinghao Chen, Wei Zhang, Xiaoyu Shen</p>
                     <p><strong>Address:</strong> <a href="https://arxiv.org/abs/2410.06554" target="_blank">https://arxiv.org/abs/2410.06554</a></p>
@@ -50,9 +75,11 @@
                 </div>
             </div>
 
-            <div class="publication">
+            <div class="article">
+                <div class="article-image">
                 <img src="./1to7/3.png" alt="Unveiling In-Context Learning">
-                <div class="publication-content">
+            </div>
+            <div class="article-content">
                     <h2>Unveiling In-Context Learning: A Coordinate System to Understand Its Working Mechanism</h2>
                     <p><strong>Author(s):</strong> Anhao Zhao, Fanghua Ye, Jinlan Fu, Xiaoyu Shen</p>
                     <p><strong>Address:</strong> <a href="https://arxiv.org/pdf/2407.17011" target="_blank">https://arxiv.org/pdf/2407.17011</a></p>
@@ -61,9 +88,11 @@
                 </div>
             </div>
 
-            <div class="publication reverse">
+            <div class="article">
+                <div class="article-image">
                 <img src="./1to7/4.jpg" alt="To Preserve or To Compress">
-                <div class="publication-content">
+            </div>
+            <div class="article-content">
                     <h2>To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large Language Models</h2>
                     <p><strong>Author(s):</strong> Junyan Lin, Haoran Chen, Dawei Zhu, Xiaoyu Shen</p>
                     <p><strong>Address:</strong> <a href="http://arxiv.org/abs/2410.06765" target="_blank">http://arxiv.org/abs/2410.06765</a></p>
@@ -72,9 +101,11 @@
                 </div>
             </div>
 
-            <div class="publication">
+            <div class="article">
+                <div class="article-image">
                 <img src="./1to7/5.jpg" alt="Deeper Insights Without Updates">
-                <div class="publication-content">
+            </div>
+            <div class="article-content">
                     <h2>Deeper Insights Without Updates: The Power of In-Context Learning Over Fine-Tuning</h2>
                     <p><strong>Author(s):</strong> Qingyu Yin, Xuzheng He, Luoao Deng, Chak Tou Leong, Fan Wang, Yanzhao Yan, Xiaoyu Shen, Qiang Zhang</p>
                     <p><strong>Address:</strong> <a href="https://arxiv.org/abs/2410.04691" target="_blank">https://arxiv.org/abs/2410.04691</a></p>
@@ -82,10 +113,11 @@
                     <p><strong>Abstract:</strong> Fine-tuning and in-context learning (ICL) are two prevalent methods in imbuing large language models with task-specific knowledge. It is commonly believed that fine-tuning can surpass ICL given sufficient training samples as it allows the model to adjust its internal parameters based on the data. However, this paper presents a counterintuitive finding: For tasks with implicit patterns, ICL captures these patterns significantly better than fine-tuning. We developed several datasets featuring implicit patterns, such as sequences determining answers through parity or identifying reducible terms in calculations. We then evaluated the models' understanding of these patterns under both fine-tuning and ICL across models ranging from 0.5B to 7B parameters. The results indicate that models employing ICL can quickly grasp deep patterns and significantly improve accuracy. In contrast, fine-tuning, despite utilizing thousands of times more training samples than ICL, achieved only limited improvements. We also proposed circuit shift theory from a mechanistic interpretability's view to explain why ICL wins.</p>
                 </div>
             </div>
-
-            <div class="publication reverse">
+            <div class="article">
+                <div class="article-image">
                 <img src="./1to7/6.jpg" alt="LawBench: Benchmarking Legal Knowledge of Large Language Models">
-                <div class="publication-content">
+            </div>
+            <div class="article-content">
                     <h2>LawBench: Benchmarking Legal Knowledge of Large Language Models</h2>
                     <p><strong>Authors:</strong> Zhiwei Fei, Xiaoyu Shen, Dawei Zhu, Fengzhe Zhou, Zhuo Han, Alan Huang, Songyang Zhang, Kai Chen, Zhixin Yin, Zongwen Shen, Jidong Ge, Vincent Ng</p>
                     <p><strong>Paper address:</strong> <a href="https://arxiv.org/pdf/2309.16289" target="_blank">https://arxiv.org/pdf/2309.16289</a></p>
@@ -94,9 +126,11 @@
                 </div>
             </div>
 
-            <div class="publication">
+            <div class="article">
+                <div class="article-image">
                 <img src="./1to7/7.jpg" alt="Assessing Implicit Retrieval Robustness of Large Language Models">
-                <div class="publication-content">
+            </div>
+            <div class="article-content">
                     <h2>Assessing "Implicit" Retrieval Robustness of Large Language Models</h2>
                     <p><strong>Author(s):</strong> Xiaoyu Shen, Rexhina Blloshmi, Dawei Zhu, Jiahuan Pei, Wei Zhang</p>
                     <p><strong>Address:</strong> <a href="https://arxiv.org/pdf/2406.18134" target="_blank">https://arxiv.org/pdf/2406.18134</a></p>
