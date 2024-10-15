@@ -7,7 +7,7 @@ body {
 
 header {
     background-color: #333;
-    color: #fff;
+    color: #ffffff;
     padding: 1rem;
 }
 
@@ -128,7 +128,7 @@ footer p {
     animation: changeBackground 10s infinite;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     padding: 50px 0;
 }
@@ -175,7 +175,7 @@ footer p {
 /* 在文件末尾添加以下样式 */
 
 .about-us-text {
-    font-size: 1.2rem; /* 增大字体大小 */
+    font-size: 1rem; /* 增大字体大小 */
     line-height: 1.8; /* 增加行高以提高可读性 */
     margin-bottom: 2rem; /* 增加底部边距 */
 }
