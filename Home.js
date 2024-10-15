@@ -8,12 +8,12 @@ function Home() {
       <h1>Welcome to EIT NLP</h1>
       <div className="image-container">
         <img 
-          src="https://github.com/EIT-NLP/EIT-NLP.github.io/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241011225030.jpg?raw=true" 
+          src="https://image.icu/image/JfsTh" 
           alt="EIT NLP Image 1" 
           className="home-image"
         />
         <img 
-          src="https://github.com/EIT-NLP/EIT-NLP.github.io/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241011225041.jpg?raw=true" 
+          src="https://image.icu/image/Jf4dJ" 
           alt="EIT NLP Image 2" 
           className="home-image"
         />

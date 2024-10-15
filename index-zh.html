@@ -48,7 +48,8 @@
                     <a href="http://arxiv.org/abs/2410.06765" target="_blank">Paper</a> | 
                     <a href="https://github.com/EIT-NLP/Connector-Selection-for-MLLM" target="_blank">Code Repository</a>
                     <br>
-                    This study explores the impact of connectors on the performance of Multimodal Large Language Models (MLLMs), providing important guidance for MLLM architecture design.
+                    近年来，多模态大型语言模型（MLLMs）引起了产业界和学术界的广泛关注。根据融合位置的不同，MLLMs分为外部融合和内部融合架构，其中外部融合架构占主导地位。然而，关如何构建最优的外部融合MLLM架构，尤其是不同连接器在不同粒度任务中的表现，仍存在较大争议。本文系统地探讨了连接器对MLLM性能的影响。具体而言，我们将连接器分为保留特征型和缩特征型两类。通过统一的分类标准，我们将来自三个综合基准数据集（MMBench、MME、SEED-Bench）的子任务划分为粗粒度感知、细粒度感知和推理三种任务类型，并从此角度评估连接器的性能。研究结果显示，在不同任务中，不同类型连接器的性能差异显著，这为MLLM架构设计提供了重要指导，并推动了MLLM架构优化的理解和发展。
+
                 </li>
                 <li>
                     <strong>Research Highlight:</strong> "Fine-Tuning Large Language Models to Translate: Will a Touch of Noisy Data in Misaligned Languages Suffice?"
@@ -58,7 +59,7 @@
                     <a href="https://arxiv.org/pdf/2404.14122" target="_blank">Paper</a> | 
                     <a href="https://github.com/uds-lsv/mt-sft" target="_blank">Code Repository</a>
                     <br>
-                    This study revisits the importance of training data factors in fine-tuning LLMs for translation, revealing surprising findings about data volume and translation direction requirements.
+                    传统上，多语言机器翻译的成功归因于训练数据的三个关键因素：大规模数据量、多样化的翻译方向以及高质量的数据。在当前微调大语言模型（LLMs）以进行翻译的实践中，我们重新审视了这些因素的重要性。我们现，LLMs 在仅微调 32 对平行句子的情况下就表现出了强大的翻译能力，并且微调单一翻译方向能够实现多方向的翻译。然而，方向的选择至关重要：仅使用英文作为目标语言进行微调可能导致任务误解，从而阻碍向非英语语言的翻译。当噪声合成数据作为目标语言时，特别是当目标语言在 LLM 预训练中已得到良好表示的情况下，也会出现问题。然而，值得注意的是，合成数据对一个在预训练中代表性较低的语言的影响较为轻微。我们的研究结果表明，在将 LLMs 适配于翻译任务时，对数据量的要求可以适当放宽，但仍需仔细考虑，以防止 LLM 利用非预期的数据偏差。
                 </li>
                 <li>
                     <strong>Latest Publication:</strong> "The Accuracy Paradox in RLHF: When Better Reward Models Don't Yield Better Language Models"
@@ -68,7 +69,7 @@
                     <a href="https://arxiv.org/abs/2410.06554" target="_blank">Paper</a> | 
                     <a href="https://github.com/EIT-NLP/AccuracyParadox-RLHF" target="_blank">Code Repository</a>
                     <br>
-                    This research reveals a surprising paradox in human feedback reinforcement learning, challenging the belief that stronger reward models always lead to better language model performance.
+                    人类反馈强化学习显著提升了自然语言处理的效果，通过训练使语言模型更符合人类预期。在这一过程中，奖励模型的强度是关键因素之一。本研究探讨了更强的奖励模型是否必然导致更优的语言模型表现。本文通过使用QA-FEEDBACK数据集和基于Longformer的奖励模型，针对相关性、事实性和完整性任务进行实验，揭示了一个令人惊讽的悖论：训练时使用中等准确率奖励模型的语言模型表现优于那些使用高准确率奖励模型的语言模型。这一发现挑战了普遍认为更强的奖励模型总是带来更好语言模型表现的观点，同时为未来关于影响模型表现的关键因素及如何选择合适奖励模型的研究开辟了新方向。
                 </li>
             </ul>
             </ul>
