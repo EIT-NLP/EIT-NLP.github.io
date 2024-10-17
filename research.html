@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,28 +13,33 @@
         margin-bottom: 40px;
         align-items: center;
     }
+
     .article-content {
         flex: 1;
         padding: 20px;
     }
+
     .article-image {
         flex: 1;
         text-align: center;
     }
+
     .article-image img {
         max-width: 100%;
         height: auto;
     }
+
     .article:nth-child(even) {
         flex-direction: row-reverse;
     }
 </style>
+
 <body>
     <header>
         <div class="header-content">
             <nav>
                 <ul>
-                    <li><h1>EIT NLP</h1></li>
+                    <li><img src="./zhuye//navLogo.png" style="width: 140px;height: 120px;scale: 1.6;"></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="research.html">Publications</a></li>
                     <li><a href="team.html">Team</a></li>
@@ -50,123 +56,236 @@
         <div class="article">
             <div class="article-image">
                 <img src="./1to7/1.png" alt="Fine-Tuning Large Language Models to Translate">
-            </div> 
-            <div class="article-content">
-                    <h2>Fine-Tuning Large Language Models to Translate: Will a Touch of Noisy Data in Misaligned Languages Suffice?</h2>
-                    <p><strong>Authors:</strong> Dawei Zhu, Pinzhen Chen, Miaoran Zhang, Barry Haddow, Xiaoyu Shen, Dietrich Klakow</p>
-                    <p><strong>Paper address:</strong> <a href="https://arxiv.org/pdf/2404.14122" target="_blank">https://arxiv.org/pdf/2404.14122</a></p>
-                    <p><strong>Code:</strong> <a href="https://github.com/uds-lsv/mt-sft" target="_blank">https://github.com/uds-lsv/mt-sft</a></p>
-                    <p><strong>Abstract:</strong> Traditionally, success in multilingual machine translation can be attributed to three key factors in training data: large volume, diverse translation directions, and high quality. In the current practice of fine-tuning large language models (LLMs) for translation, we revisit the importance of these factors. We find that LLMs display strong translation capability after being fine-tuned on as few as 32 parallel sentences and that fine-tuning on a single translation direction enables translation in multiple directions. However, the choice of direction is critical: fine-tuning LLMs with only English on the target side can lead to task misinterpretation, which hinders translation into nonEnglish languages. Problems also arise when noisy synthetic data is placed on the target side, especially when the target language is wellrepresented in LLM pre-training. Yet interestingly, synthesized data in an under-represented language has a less pronounced effect. Our findings suggest that when adapting LLMs to translation, the requirement on data quantity can be eased but careful considerations are still crucial to prevent an LLM from exploiting unintended data biases.1
-                        </p>
-                </div>
             </div>
+            <div class="article-content">
+                <h2>Fine-Tuning Large Language Models to Translate: Will a Touch of Noisy Data in Misaligned Languages
+                    Suffice?</h2>
+                <p><strong>Authors:</strong> Dawei Zhu, Pinzhen Chen, Miaoran Zhang, Barry Haddow, Xiaoyu Shen, Dietrich
+                    Klakow</p>
+                <p><strong>Paper address:</strong> <a href="https://arxiv.org/pdf/2404.14122"
+                        target="_blank">https://arxiv.org/pdf/2404.14122</a></p>
+                <p><strong>Code:</strong> <a href="https://github.com/uds-lsv/mt-sft"
+                        target="_blank">https://github.com/uds-lsv/mt-sft</a></p>
+                <p><strong>Abstract:</strong> Traditionally, success in multilingual machine translation can be
+                    attributed to three key factors in training data: large volume, diverse translation directions, and
+                    high quality. In the current practice of fine-tuning large language models (LLMs) for translation,
+                    we revisit the importance of these factors. We find that LLMs display strong translation capability
+                    after being fine-tuned on as few as 32 parallel sentences and that fine-tuning on a single
+                    translation direction enables translation in multiple directions. However, the choice of direction
+                    is critical: fine-tuning LLMs with only English on the target side can lead to task
+                    misinterpretation, which hinders translation into nonEnglish languages. Problems also arise when
+                    noisy synthetic data is placed on the target side, especially when the target language is
+                    wellrepresented in LLM pre-training. Yet interestingly, synthesized data in an under-represented
+                    language has a less pronounced effect. Our findings suggest that when adapting LLMs to translation,
+                    the requirement on data quantity can be eased but careful considerations are still crucial to
+                    prevent an LLM from exploiting unintended data biases.
+                </p>
+            </div>
+        </div>
 
-            <div class="article">
+        <div class="article">
             <div class="article-image">
                 <img src="./1to7/2.png" alt="The Accuracy Paradox in RLHF">
             </div>
             <div class="article-content">
-                    <h2>The Accuracy Paradox in RLHF: When Better Reward Models Don't Yield Better Language Models</h2>
-                    <p><strong>Author(s):</strong> Yanjun Chen, Dawei Zhu, Yirong Sun, Xinghao Chen, Wei Zhang, Xiaoyu Shen</p>
-                    <p><strong>Address:</strong> <a href="https://arxiv.org/abs/2410.06554" target="_blank">https://arxiv.org/abs/2410.06554</a></p>
-                    <p><strong>Code:</strong> <a href="https://github.com/EIT-NLP/AccuracyParadox-RLHF" target="_blank">https://github.com/EIT-NLP/AccuracyParadox-RLHF</a></p>
-                    <p><strong>Abstract:</strong> Reinforcement Learning from Human Feedback significantly enhances Natural Language Processing by aligning language models with human expectations. A critical factor in this alignment is the strength of reward models used during training. This study explores whether stronger reward models invariably lead to better language models. In this paper, through experiments on relevance, factuality, and completeness tasks using the QA-FEEDBACK dataset and reward models based on Longformer, we uncover a surprising paradox: language models trained with moderately accurate reward models outperform those guided by highly accurate ones. This challenges the widely held belief that stronger reward models always lead to better language models, and opens up new avenues for future research into the key factors driving model performance and how to choose the most suitable reward models.</p>
-                </div>
+                <h2>The Accuracy Paradox in RLHF: When Better Reward Models Don't Yield Better Language Models</h2>
+                <p><strong>Author(s):</strong> Yanjun Chen, Dawei Zhu, Yirong Sun, Xinghao Chen, Wei Zhang, Xiaoyu Shen
+                </p>
+                <p><strong>Address:</strong> <a href="https://arxiv.org/abs/2410.06554"
+                        target="_blank">https://arxiv.org/abs/2410.06554</a></p>
+                <p><strong>Code:</strong> <a href="https://github.com/EIT-NLP/AccuracyParadox-RLHF"
+                        target="_blank">https://github.com/EIT-NLP/AccuracyParadox-RLHF</a></p>
+                <p><strong>Abstract:</strong> Reinforcement Learning from Human Feedback significantly enhances Natural
+                    Language Processing by aligning language models with human expectations. A critical factor in this
+                    alignment is the strength of reward models used during training. This study explores whether
+                    stronger reward models invariably lead to better language models. In this paper, through experiments
+                    on relevance, factuality, and completeness tasks using the QA-FEEDBACK dataset and reward models
+                    based on Longformer, we uncover a surprising paradox: language models trained with moderately
+                    accurate reward models outperform those guided by highly accurate ones. This challenges the widely
+                    held belief that stronger reward models always lead to better language models, and opens up new
+                    avenues for future research into the key factors driving model performance and how to choose the
+                    most suitable reward models.</p>
             </div>
+        </div>
 
-            <div class="article">
-                <div class="article-image">
+        <div class="article">
+            <div class="article-image">
                 <img src="./1to7/3.png" alt="Unveiling In-Context Learning">
             </div>
             <div class="article-content">
-                    <h2>Unveiling In-Context Learning: A Coordinate System to Understand Its Working Mechanism</h2>
-                    <p><strong>Author(s):</strong> Anhao Zhao, Fanghua Ye, Jinlan Fu, Xiaoyu Shen</p>
-                    <p><strong>Address:</strong> <a href="https://arxiv.org/pdf/2407.17011" target="_blank">https://arxiv.org/pdf/2407.17011</a></p>
-                    <p><strong>Code:</strong> <a href="https://github.com/EIT-NLP/2D-Coordinate-System-for-ICL" target="_blank">https://github.com/EIT-NLP/2D-Coordinate-System-for-ICL</a></p>
-                    <p><strong>Abstract:</strong> Large language models (LLMs) exhibit remarkable in-context learning (ICL) capabilities. However, the underlying working mechanism of ICL remains poorly understood. Recent research presents two conflicting views on ICL: One emphasizes the impact of similar examples in the demonstrations, stressing the need for label correctness and more shots. The other attributes it to LLMs’ inherent ability of task recognition, deeming label correctness and shot numbers of demonstrations as not crucial. In this work, we provide a Two-Dimensional Coordinate System that unifies both views into a systematic framework. The framework explains the behavior of ICL through two orthogonal variables: whether similar examples are presented in the demonstrations (perception) and whether LLMs can recognize the task (cognition). We propose the peak inverse rank metric to detect the task recognition ability of LLMs and study LLMs’ reactions to different definitions of similarity. Based on these, we conduct extensive experiments to elucidate how ICL functions across each quadrant on multiple representative classification tasks. Finally, we extend our analyses to generation tasks, showing that our coordinate system can also be used to interpret ICL for generation tasks effectively.</p>
-                </div>
+                <h2>Unveiling In-Context Learning: A Coordinate System to Understand Its Working Mechanism</h2>
+                <p><strong>Author(s):</strong> Anhao Zhao, Fanghua Ye, Jinlan Fu, Xiaoyu Shen</p>
+                <p><strong>Address:</strong> <a href="https://arxiv.org/pdf/2407.17011"
+                        target="_blank">https://arxiv.org/pdf/2407.17011</a></p>
+                <p><strong>Code:</strong> <a href="https://github.com/EIT-NLP/2D-Coordinate-System-for-ICL"
+                        target="_blank">https://github.com/EIT-NLP/2D-Coordinate-System-for-ICL</a></p>
+                <p><strong>Abstract:</strong> Large language models (LLMs) exhibit remarkable in-context learning (ICL)
+                    capabilities. However, the underlying working mechanism of ICL remains poorly understood. Recent
+                    research presents two conflicting views on ICL: One emphasizes the impact of similar examples in the
+                    demonstrations, stressing the need for label correctness and more shots. The other attributes it to
+                    LLMs’ inherent ability of task recognition, deeming label correctness and shot numbers of
+                    demonstrations as not crucial. In this work, we provide a Two-Dimensional Coordinate System that
+                    unifies both views into a systematic framework. The framework explains the behavior of ICL through
+                    two orthogonal variables: whether similar examples are presented in the demonstrations (perception)
+                    and whether LLMs can recognize the task (cognition). We propose the peak inverse rank metric to
+                    detect the task recognition ability of LLMs and study LLMs’ reactions to different definitions of
+                    similarity. Based on these, we conduct extensive experiments to elucidate how ICL functions across
+                    each quadrant on multiple representative classification tasks. Finally, we extend our analyses to
+                    generation tasks, showing that our coordinate system can also be used to interpret ICL for
+                    generation tasks effectively.</p>
             </div>
+        </div>
 
-            <div class="article">
-                <div class="article-image">
+        <div class="article">
+            <div class="article-image">
                 <img src="./1to7/4.jpg" alt="To Preserve or To Compress">
             </div>
             <div class="article-content">
-                    <h2>To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large Language Models</h2>
-                    <p><strong>Author(s):</strong> Junyan Lin, Haoran Chen, Dawei Zhu, Xiaoyu Shen</p>
-                    <p><strong>Address:</strong> <a href="http://arxiv.org/abs/2410.06765" target="_blank">http://arxiv.org/abs/2410.06765</a></p>
-                    <p><strong>Code:</strong> <a href="https://github.com/EIT-NLP/Connector-Selection-for-MLLM" target="_blank">https://github.com/EIT-NLP/Connector-Selection-for-MLLM</a></p>
-                    <p><strong>Abstract:</strong> In recent years, multimodal large language models (MLLMs) have garnered significant attention from both industry and academia. However, there is still considerable debate on constructing MLLM architectures, particularly regarding the selection of appropriate connectors for perception tasks of varying granularities. This paper systematically investigates the impact of connectors on MLLM performance. Specifically, we classify connectors into feature-preserving and feature-compressing types. Utilizing a unified classification standard, we categorize sub-tasks from three comprehensive benchmarks, MMBench, MME, and SEED-Bench, into three task types: coarse-grained perception, fine-grained perception, and reasoning, and evaluate the performance. Our findings reveal that feature-preserving connectors excel in \emph{fine-grained perception} tasks due to their ability to retain detailed visual information. In contrast, feature-compressing connectors, while less effective in fine-grained perception tasks, offer significant speed advantages and perform comparably in \emph{coarse-grained perception} and \emph{reasoning} tasks. These insights are crucial for guiding MLLM architecture design and advancing the optimization of MLLM architectures.</p>
-                </div>
+                <h2>To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large Language
+                    Models</h2>
+                <p><strong>Author(s):</strong> Junyan Lin, Haoran Chen, Dawei Zhu, Xiaoyu Shen</p>
+                <p><strong>Address:</strong> <a href="http://arxiv.org/abs/2410.06765"
+                        target="_blank">http://arxiv.org/abs/2410.06765</a></p>
+                <p><strong>Code:</strong> <a href="https://github.com/EIT-NLP/Connector-Selection-for-MLLM"
+                        target="_blank">https://github.com/EIT-NLP/Connector-Selection-for-MLLM</a></p>
+                <p><strong>Abstract:</strong> In recent years, multimodal large language models (MLLMs) have garnered
+                    significant attention from both industry and academia. However, there is still considerable debate
+                    on constructing MLLM architectures, particularly regarding the selection of appropriate connectors
+                    for perception tasks of varying granularities. This paper systematically investigates the impact of
+                    connectors on MLLM performance. Specifically, we classify connectors into feature-preserving and
+                    feature-compressing types. Utilizing a unified classification standard, we categorize sub-tasks from
+                    three comprehensive benchmarks, MMBench, MME, and SEED-Bench, into three task types: coarse-grained
+                    perception, fine-grained perception, and reasoning, and evaluate the performance. Our findings
+                    reveal that feature-preserving connectors excel in \emph{fine-grained perception} tasks due to their
+                    ability to retain detailed visual information. In contrast, feature-compressing connectors, while
+                    less effective in fine-grained perception tasks, offer significant speed advantages and perform
+                    comparably in \emph{coarse-grained perception} and \emph{reasoning} tasks. These insights are
+                    crucial for guiding MLLM architecture design and advancing the optimization of MLLM architectures.
+                </p>
             </div>
+        </div>
 
-            <div class="article">
-                <div class="article-image">
+        <div class="article">
+            <div class="article-image">
                 <img src="./1to7/5.jpg" alt="Deeper Insights Without Updates">
             </div>
             <div class="article-content">
-                    <h2>Deeper Insights Without Updates: The Power of In-Context Learning Over Fine-Tuning</h2>
-                    <p><strong>Author(s):</strong> Qingyu Yin, Xuzheng He, Luoao Deng, Chak Tou Leong, Fan Wang, Yanzhao Yan, Xiaoyu Shen, Qiang Zhang</p>
-                    <p><strong>Address:</strong> <a href="https://arxiv.org/abs/2410.04691" target="_blank">https://arxiv.org/abs/2410.04691</a></p>
-                    <p><strong>Code:</strong> <a href="https://github.com/MikaStars39/ICLvsFinetune" target="_blank">https://github.com/MikaStars39/ICLvsFinetune</a></p>
-                    <p><strong>Abstract:</strong> Fine-tuning and in-context learning (ICL) are two prevalent methods in imbuing large language models with task-specific knowledge. It is commonly believed that fine-tuning can surpass ICL given sufficient training samples as it allows the model to adjust its internal parameters based on the data. However, this paper presents a counterintuitive finding: For tasks with implicit patterns, ICL captures these patterns significantly better than fine-tuning. We developed several datasets featuring implicit patterns, such as sequences determining answers through parity or identifying reducible terms in calculations. We then evaluated the models' understanding of these patterns under both fine-tuning and ICL across models ranging from 0.5B to 7B parameters. The results indicate that models employing ICL can quickly grasp deep patterns and significantly improve accuracy. In contrast, fine-tuning, despite utilizing thousands of times more training samples than ICL, achieved only limited improvements. We also proposed circuit shift theory from a mechanistic interpretability's view to explain why ICL wins.</p>
-                </div>
+                <h2>Deeper Insights Without Updates: The Power of In-Context Learning Over Fine-Tuning</h2>
+                <p><strong>Author(s):</strong> Qingyu Yin, Xuzheng He, Luoao Deng, Chak Tou Leong, Fan Wang, Yanzhao
+                    Yan, Xiaoyu Shen, Qiang Zhang</p>
+                <p><strong>Address:</strong> <a href="https://arxiv.org/abs/2410.04691"
+                        target="_blank">https://arxiv.org/abs/2410.04691</a></p>
+                <p><strong>Code:</strong> <a href="https://github.com/MikaStars39/ICLvsFinetune"
+                        target="_blank">https://github.com/MikaStars39/ICLvsFinetune</a></p>
+                <p><strong>Abstract:</strong> Fine-tuning and in-context learning (ICL) are two prevalent methods in
+                    imbuing large language models with task-specific knowledge. It is commonly believed that fine-tuning
+                    can surpass ICL given sufficient training samples as it allows the model to adjust its internal
+                    parameters based on the data. However, this paper presents a counterintuitive finding: For tasks
+                    with implicit patterns, ICL captures these patterns significantly better than fine-tuning. We
+                    developed several datasets featuring implicit patterns, such as sequences determining answers
+                    through parity or identifying reducible terms in calculations. We then evaluated the models'
+                    understanding of these patterns under both fine-tuning and ICL across models ranging from 0.5B to 7B
+                    parameters. The results indicate that models employing ICL can quickly grasp deep patterns and
+                    significantly improve accuracy. In contrast, fine-tuning, despite utilizing thousands of times more
+                    training samples than ICL, achieved only limited improvements. We also proposed circuit shift theory
+                    from a mechanistic interpretability's view to explain why ICL wins.</p>
             </div>
-            <div class="article">
-                <div class="article-image">
+        </div>
+        <div class="article">
+            <div class="article-image">
                 <img src="./1to7/6.jpg" alt="LawBench: Benchmarking Legal Knowledge of Large Language Models">
             </div>
             <div class="article-content">
-                    <h2>LawBench: Benchmarking Legal Knowledge of Large Language Models</h2>
-                    <p><strong>Authors:</strong> Zhiwei Fei, Xiaoyu Shen, Dawei Zhu, Fengzhe Zhou, Zhuo Han, Alan Huang, Songyang Zhang, Kai Chen, Zhixin Yin, Zongwen Shen, Jidong Ge, Vincent Ng</p>
-                    <p><strong>Paper address:</strong> <a href="https://arxiv.org/pdf/2309.16289" target="_blank">https://arxiv.org/pdf/2309.16289</a></p>
-                    <p><strong>Code:</strong> <a href="https://github.com/open-compass/LawBench/" target="_blank">https://github.com/open-compass/LawBench/</a></p>
-                    <p><strong>Abstract:</strong> Large language models (LLMs) have demonstrated strong capabilities in various aspects. However, when applying them to the highly specialized, safe-critical legal domain, it is unclear how much legal knowledge they possess and whether they can reliably perform legal-related tasks. To address this gap, we propose a comprehensive evaluation benchmark LawBench. LawBench has been meticulously crafted to have precise assessment of the LLMs’ legal capabilities from three cognitive levels: (1) Legal knowledge memorization: whether LLMs can memorize needed legal concepts, articles and facts; (2) Legal knowledge understanding: whether LLMs can comprehend entities, events and relationships within legal text; (3) Legal knowledge applying: whether LLMs can properly utilize their legal knowledge and make necessary reasoning steps to solve realistic legal tasks. LawBench contains 20 diverse tasks covering 5 task types: single-label classification (SLC), multi-label classification (MLC), regression, extraction and generation. We perform extensive evaluations of 51 LLMs on LawBench, including 20 multilingual LLMs, 22 Chinese-oriented LLMs and 9 legal specific LLMs. The results show that GPT-4 remains the best-performing LLM in the legal domain, surpassing the others by a significant margin. While fine-tuning LLMs on legal specific text brings certain improvements, we are still a long way from obtaining usable and reliable LLMs in legal tasks. All data, model predictions and evaluation code are released in https://github.com/open-compass/LawBench/. We hope this benchmark provides in-depth understanding of the LLMs’ domain-specified capabilities and speed up the development of LLMs in the legal domain.</a>.</p>
-                </div>
+                <h2>LawBench: Benchmarking Legal Knowledge of Large Language Models</h2>
+                <p><strong>Authors:</strong> Zhiwei Fei, Xiaoyu Shen, Dawei Zhu, Fengzhe Zhou, Zhuo Han, Alan Huang,
+                    Songyang Zhang, Kai Chen, Zhixin Yin, Zongwen Shen, Jidong Ge, Vincent Ng</p>
+                <p><strong>Paper address:</strong> <a href="https://arxiv.org/pdf/2309.16289"
+                        target="_blank">https://arxiv.org/pdf/2309.16289</a></p>
+                <p><strong>Code:</strong> <a href="https://github.com/open-compass/LawBench/"
+                        target="_blank">https://github.com/open-compass/LawBench/</a></p>
+                <p><strong>Abstract:</strong> Large language models (LLMs) have demonstrated strong capabilities in
+                    various aspects. However, when applying them to the highly specialized, safe-critical legal domain,
+                    it is unclear how much legal knowledge they possess and whether they can reliably perform
+                    legal-related tasks. To address this gap, we propose a comprehensive evaluation benchmark LawBench.
+                    LawBench has been meticulously crafted to have precise assessment of the LLMs’ legal capabilities
+                    from three cognitive levels: (1) Legal knowledge memorization: whether LLMs can memorize needed
+                    legal concepts, articles and facts; (2) Legal knowledge understanding: whether LLMs can comprehend
+                    entities, events and relationships within legal text; (3) Legal knowledge applying: whether LLMs can
+                    properly utilize their legal knowledge and make necessary reasoning steps to solve realistic legal
+                    tasks. LawBench contains 20 diverse tasks covering 5 task types: single-label classification (SLC),
+                    multi-label classification (MLC), regression, extraction and generation. We perform extensive
+                    evaluations of 51 LLMs on LawBench, including 20 multilingual LLMs, 22 Chinese-oriented LLMs and 9
+                    legal specific LLMs. The results show that GPT-4 remains the best-performing LLM in the legal
+                    domain, surpassing the others by a significant margin. While fine-tuning LLMs on legal specific text
+                    brings certain improvements, we are still a long way from obtaining usable and reliable LLMs in
+                    legal tasks. All data, model predictions and evaluation code are released in
+                    https://github.com/open-compass/LawBench/. We hope this benchmark provides in-depth understanding of
+                    the LLMs’ domain-specified capabilities and speed up the development of LLMs in the legal
+                    domain.</a>.</p>
             </div>
+        </div>
 
-            <div class="article">
-                <div class="article-image">
+        <div class="article">
+            <div class="article-image">
                 <img src="./1to7/7.jpg" alt="Assessing Implicit Retrieval Robustness of Large Language Models">
             </div>
             <div class="article-content">
-                    <h2>Assessing "Implicit" Retrieval Robustness of Large Language Models</h2>
-                    <p><strong>Author(s):</strong> Xiaoyu Shen, Rexhina Blloshmi, Dawei Zhu, Jiahuan Pei, Wei Zhang</p>
-                    <p><strong>Address:</strong> <a href="https://arxiv.org/pdf/2406.18134" target="_blank">https://arxiv.org/pdf/2406.18134</a></p>
-                    <p><strong>Abstract:</strong> Retrieval-augmented generation has gained popularity as a framework to enhance large language models with external knowledge. However, its effectiveness hinges on the retrieval robustness of the model. If the model lacks retrieval robustness, its performance is constrained by the accuracy of the retriever, resulting in significant compromises when the retrieved context is irrelevant. In this paper, we evaluate the “implicit” retrieval robustness of various large language models, instructing them to directly output the final answer without explicitly judging the relevance of the retrieved context. Our findings reveal that fine-tuning on a mix of gold and distracting context significantly enhances the model’s robustness to retrieval inaccuracies, while still maintaining its ability to extract correct answers when retrieval is accurate. This suggests that large language models can implicitly handle relevant or irrelevant retrieved context by learning solely from the supervision of the final answer in an end-toend manner. Introducing an additional process for explicit relevance judgment can be unnecessary and disrupts the end-to-end approach.</p>
-                </div>
+                <h2>Assessing "Implicit" Retrieval Robustness of Large Language Models</h2>
+                <p><strong>Author(s):</strong> Xiaoyu Shen, Rexhina Blloshmi, Dawei Zhu, Jiahuan Pei, Wei Zhang</p>
+                <p><strong>Address:</strong> <a href="https://arxiv.org/pdf/2406.18134"
+                        target="_blank">https://arxiv.org/pdf/2406.18134</a></p>
+                <p><strong>Abstract:</strong> Retrieval-augmented generation has gained popularity as a framework to
+                    enhance large language models with external knowledge. However, its effectiveness hinges on the
+                    retrieval robustness of the model. If the model lacks retrieval robustness, its performance is
+                    constrained by the accuracy of the retriever, resulting in significant compromises when the
+                    retrieved context is irrelevant. In this paper, we evaluate the “implicit” retrieval robustness of
+                    various large language models, instructing them to directly output the final answer without
+                    explicitly judging the relevance of the retrieved context. Our findings reveal that fine-tuning on a
+                    mix of gold and distracting context significantly enhances the model’s robustness to retrieval
+                    inaccuracies, while still maintaining its ability to extract correct answers when retrieval is
+                    accurate. This suggests that large language models can implicitly handle relevant or irrelevant
+                    retrieved context by learning solely from the supervision of the final answer in an end-toend
+                    manner. Introducing an additional process for explicit relevance judgment can be unnecessary and
+                    disrupts the end-to-end approach.</p>
             </div>
+        </div>
         </div>
         <h2>Recent Publications</h2>
         <ul>
             <li>
-                <strong>Fine-Tuning Large Language Models to Translate: Will a Touch of Noisy Data in Misaligned Languages Suffice?</strong><br>
+                <strong>Fine-Tuning Large Language Models to Translate: Will a Touch of Noisy Data in Misaligned
+                    Languages Suffice?</strong><br>
                 Dawei Zhu, Pinzhen Chen, Miaoran Zhang, Barry Haddow, Xiaoyu Shen, Dietrich Klakow, arXiv, 2024.<br>
                 <a href="https://arxiv.org/pdf/2404.14122" target="_blank">https://arxiv.org/pdf/2404.14122</a>
             </li>
             <li>
-                <strong>The Accuracy Paradox in RLHF: When Better Reward Models Don't Yield Better Language Models</strong><br>
+                <strong>The Accuracy Paradox in RLHF: When Better Reward Models Don't Yield Better Language
+                    Models</strong><br>
                 Yanjun Chen, Dawei Zhu, Yirong Sun, Xinghao Chen, Wei Zhang, Xiaoyu Shen, arXiv, 2024.<br>
                 <a href="https://arxiv.org/abs/2410.06554" target="_blank">https://arxiv.org/abs/2410.06554</a>
             </li>
             <li>
-                <strong>Unveiling In-Context Learning: A Coordinate System to Understand Its Working Mechanism</strong><br>
+                <strong>Unveiling In-Context Learning: A Coordinate System to Understand Its Working
+                    Mechanism</strong><br>
                 Anhao Zhao, Fanghua Ye, Jinlan Fu, Xiaoyu Shen, arXiv, 2024.<br>
                 <a href="https://arxiv.org/pdf/2407.17011" target="_blank">https://arxiv.org/pdf/2407.17011</a>
             </li>
             <li>
-                <strong>To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large Language Models</strong><br>
+                <strong>To Preserve or To Compress: An In-Depth Study of Connector Selection in Multimodal Large
+                    Language Models</strong><br>
                 Junyan Lin, Haoran Chen, Dawei Zhu, Xiaoyu Shen, arXiv, 2024.<br>
                 <a href="http://arxiv.org/abs/2410.06765" target="_blank">http://arxiv.org/abs/2410.06765</a>
             </li>
             <li>
                 <strong>Deeper Insights Without Updates: The Power of In-Context Learning Over Fine-Tuning</strong><br>
-                Qingyu Yin, Xuzheng He, Luoao Deng, Chak Tou Leong, Fan Wang, Yanzhao Yan, Xiaoyu Shen, Qiang Zhang, arXiv, 2024.<br>
+                Qingyu Yin, Xuzheng He, Luoao Deng, Chak Tou Leong, Fan Wang, Yanzhao Yan, Xiaoyu Shen, Qiang Zhang,
+                arXiv, 2024.<br>
                 <a href="https://arxiv.org/abs/2410.04691" target="_blank">https://arxiv.org/abs/2410.04691</a>
             </li>
             <li>
                 <strong>LawBench: Benchmarking Legal Knowledge of Large Language Models</strong><br>
-                Zhiwei Fei, Xiaoyu Shen, Dawei Zhu, Fengzhe Zhou, Zhuo Han, Alan Huang, Songyang Zhang, Kai Chen, Zhixin Yin, Zongwen Shen, Jidong Ge, Vincent Ng, arXiv, 2023.<br>
+                Zhiwei Fei, Xiaoyu Shen, Dawei Zhu, Fengzhe Zhou, Zhuo Han, Alan Huang, Songyang Zhang, Kai Chen, Zhixin
+                Yin, Zongwen Shen, Jidong Ge, Vincent Ng, arXiv, 2023.<br>
                 <a href="https://arxiv.org/pdf/2309.16289" target="_blank">https://arxiv.org/pdf/2309.16289</a>
             </li>
             <li>
@@ -195,13 +314,13 @@
                 document.querySelector('a[href="recruitment.html"]').textContent = "招聘";
                 // 更新页脚
                 document.querySelector('footer p').textContent = "© 2023 EIT NLP. 保留所有权利。";
-                
+
                 // 更新出版物内容
                 const publications = document.querySelectorAll('.publication-content');
                 publications.forEach((pub, index) => {
                     const h2 = pub.querySelector('h2');
                     const paragraphs = pub.querySelectorAll('p');
-                    
+
                     // 这里需要为每个出版物准备中文翻译
                     const chineseTitles = [
                         "微调大型语言模型以进行翻译：在不对齐语言中添加少量噪声数据是否足够？",
@@ -210,20 +329,20 @@
                         "保留还是压缩：多模态大型语言模型中连接器选择的深入研究",
                         "无需更新的深入洞察：上下文学习相对于微调的优势",
                         "LawBench：基准测试大型语言模型的法律知识",
-                
+
                     ];
-                    
+
                     h2.textContent = chineseTitles[index];
                     paragraphs[0].innerHTML = paragraphs[0].innerHTML.replace('Authors:', '作者：');
                     paragraphs[1].innerHTML = paragraphs[1].innerHTML.replace('Paper address:', '论文地址：');
                     paragraphs[2].innerHTML = paragraphs[2].innerHTML.replace('Code:', '代码：');
-                    
+
                     // 这里需要为每个出版物的描述准备中文翻译
                     const chineseDescriptions = [
                         "论文描述：传统上，多语言机器翻译的成功归因于训练数据的三个关键因素：大规模数据量、多样化的翻译方向和高质量数据。在当前微调大型语言模型（LLMs）进行翻译的实践中，我们重新审视了这些因素的重要性。我们发现，LLMs在仅使用32对平行句子进行微调时就表现出强大的翻译能力，并且微调单一翻译方向可以实现多方向翻译。然而，方向的选择至关重要：仅使用英语作为目标语言进行微调可能导致任务误解，从而阻碍了向非英语语言的翻译。当使用噪声合成数据作为目标语言时，特别是当目标语言在LLM预训练中已得到良好表示时，也可能出现问题。然而，值得注意的是，合成数据对预训练中表示不佳的语言的影响较小。我们的结果表明，在将LLMs适应翻译任务时，可以适当放宽数据量要求，但仍需谨慎考虑，以防止LLMs利用非预期的数据偏差。",
                         // 为其他出版物添加中文描述
                     ];
-                    
+
                     const descriptionParagraph = paragraphs[paragraphs.length - 1];
                     descriptionParagraph.innerHTML = descriptionParagraph.innerHTML.replace(/Paper Description:|Paper Introduction:|Abstract:|Thesis Statement:|Dissertation Synopsis:/, '论文描述：');
                     descriptionParagraph.textContent = chineseDescriptions[index];
@@ -235,4 +354,5 @@
         }
     </script>
 </body>
+
 </html>
